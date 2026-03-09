@@ -509,8 +509,13 @@
     }
 
     @keyframes profileFloat {
-      0%,  100% { transform: translateY(0px);    }
-      50%        { transform: translateY(-14px);  }
+      0%,  100% { transform: translateY(0px);   }
+      50%        { transform: translateY(-14px); }
+    }
+
+    @keyframes profileFloatMobile {
+      0%,  100% { transform: translateY(0px);  }
+      50%        { transform: translateY(-6px); }
     }
 
     @keyframes glowPulse {
@@ -1316,8 +1321,9 @@
         padding: 1rem 0;
         text-align: center;
       }
-      .hero-photo-wrap { order: -1; }
+      .hero-photo-wrap { order: -1; padding-top: 1.2rem; }
       .profile-img     { width: 180px; height: 180px; }
+      .profile-card    { animation: profileFloatMobile 4s ease-in-out infinite; }
       .profile-badge   { display: none; }
 
       .hero-subheadline { font-size: 1rem; }
@@ -1449,7 +1455,7 @@
       <div class="hero-grid">
 
         <!-- Left content -->
-        <div style="padding-top: 4.2cm;">
+        <div class="hero-text-col">
           <div class="hero-eyebrow fade-in-left">AI Engineer &amp; Software Developer</div>
           <h1 class="hero-headline fade-in-left delay-1">
             Every Business Problem Is A
